@@ -1,9 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <h1 title="House title"><%= @house.title %></h1>
+
+<% if @house.location.match /london/i %>
+  <div class="highlight">
+    <span>London property!</span>
+  </div>
+<% end %>
 <p>
   <strong>Located in</strong>
   <%= @house.location %>
+
 </p>
 
 <p>
